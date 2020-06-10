@@ -4,6 +4,7 @@ import { Route, Router } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
+import HomePage from '../HomePage/HomePage';
 import RandomCharacter from '../RandomCharacter/RandomCharacter';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             <div className="container">
                 <Header />
                 <Nav />
+                <Route exact path="/" component={HomePage} />
                 <Route exact path="/random" component={RandomCharacter} />
             </div>
         </div>
