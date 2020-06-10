@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.scss';
+import { Route, Router } from 'react-router-dom';
 
 import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
+import RandomCharacter from '../RandomCharacter/RandomCharacter';
 
 function App() {
     return (
@@ -10,6 +12,7 @@ function App() {
             <div className="container">
                 <Header />
                 <Nav />
+                <Route exact path="/random" component={RandomCharacter} />
             </div>
         </div>
     );

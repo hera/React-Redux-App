@@ -7,6 +7,7 @@ function Nav (props) {
         <nav className="col" className="Nav">
             <ul className="Nav__links">
                 <li><Link to="/" className="Nav__link">Home</Link></li>
+                <li><Link to="/random" className="Nav__link">Random character</Link></li>
             </ul>
         </nav>
     )
