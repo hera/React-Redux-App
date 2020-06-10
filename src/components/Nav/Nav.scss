@@ -1,0 +1,17 @@
+
+.Nav {
+    border-bottom: 1px solid #ddd;
+
+    &__links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+    
+    &__link {
+        display: block;
+        line-height: 3rem;
+        padding: 0 1.5rem;
+    }
+}
