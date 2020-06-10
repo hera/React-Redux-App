@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import Nav from '../Nav/Nav';
 import HomePage from '../HomePage/HomePage';
 import RandomCharacter from '../RandomCharacter/RandomCharacter';
+import Search from '../Search/Search';
 
 function App() {
     return (
@@ -14,7 +15,8 @@ function App() {
                 <Header />
                 <Nav />
                 <Route exact path="/" component={HomePage} />
-                <Route exact path="/random" component={RandomCharacter} />
+                <Route path="/random" component={RandomCharacter} />
+                <Route path="/search" component={Search} />
             </div>
         </div>
     );

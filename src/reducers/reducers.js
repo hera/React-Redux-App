@@ -1,7 +1,10 @@
 import {
     GET_RANDOM_CHARACTER_START,
     GET_RANDOM_CHARACTER_SUCCESS,
-    GET_RANDOM_CHARACTER_ERROR
+    GET_RANDOM_CHARACTER_ERROR,
+    SEARCH_ERROR,
+    SEARCH_SUCCESS,
+    SEARCH_SET_QUERY
 } from '../actions/actionTypes';
 
 
@@ -37,6 +40,36 @@ export function randomCharacterReducer(state = initialRandomCharacter, action) {
                 ...state,
                 isLoading: false,
                 error: action.payload
+            }
+        default:
+            return state;
+    }
+}
+
+const initialSearch = {
+    query: '',
+    error: '',
+    characters: []
+};
+
+export function searchReducer(state = initialSearch, action) {
+    switch (action.type) {
+        case SEARCH_SUCCESS:
+            return {
+                ...state,
+                error: initialSearch.error,
+                characters: action.payload
+            }
+        case SEARCH_SET_QUERY:
+            return {
+                ...state,
+                query: action.payload
+            }
+        case SEARCH_ERROR:
+            return {
+                ...state,
+                error: action.payload,
+                characters: initialSearch.characters
             }
         default:
             return state;
